@@ -11,7 +11,7 @@ print(f"Screen height: {SCREEN_HEIGHT}")
 def main():
     pygame.init()
     clock = pygame.time.Clock()
-    dt = 0.0
+    dt = 0.0  # represents the amount of time that has passed since the last frame or update cycle
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     player = Player(x=SCREEN_WIDTH / 2, y=SCREEN_HEIGHT / 2)
 
@@ -23,6 +23,8 @@ def main():
                 return
 
         # draw objects here
+        screen.fill("black")
+        player.update(dt)
         player.draw(screen)
 
         # show everything that was drawn
