@@ -32,3 +32,6 @@ class Player(CircleShape):
             self.rotate(-dt)
         if keys[pygame.K_d]:
             self.rotate(dt)
+
+    def move(self, dt: float):
+        pass
