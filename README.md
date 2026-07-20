@@ -5,7 +5,7 @@ A classic Asteroids clone built with [Pygame](https://www.pygame.org/), based on
 ## Gameplay
 
 - Fly your ship around an open-space, black-background arena
-- Shoot asteroids to break them apart — each hit splits a large asteroid into two smaller, faster-moving fragments, until they're small enough to be destroyed outright
+- Shoot asteroids to break them apart, each hit splits a large asteroid into two smaller, faster-moving fragments, until they're small enough to be destroyed outright
 - Colliding with an asteroid ends the game
 - New asteroids continuously spawn from the edges of the screen over time
 
@@ -71,7 +71,7 @@ The game uses Pygame's [`sprite.Group`](https://www.pygame.org/docs/ref/sprite.h
 - **`asteroids`** — used specifically for collision checks against the player and shots
 - **`shots`** — used specifically for collision checks against asteroids
 
-Each class declares which groups it belongs to via a `containers` class attribute, so simply instantiating a `Player`, `Asteroid`, or `Shot` automatically registers it in the right groups — no manual list management needed in the main loop.
+Each class declares which groups it belongs to via a `containers` class attribute, so simply instantiating a `Player`, `Asteroid`, or `Shot` automatically registers it in the right groups, no manual list management needed in the main loop.
 
 Movement and shooting use `pygame.Vector2` rotation to convert the ship's current facing angle into a direction vector, scaled by speed and delta time (`dt`) for frame-rate-independent motion.
 
